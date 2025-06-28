@@ -1,13 +1,13 @@
+import { useState } from 'react';
+
 function useCounter({ start = 0, by = 1 } = {}) {
-    const [value, setValue] = useCounter(start)
-    
-    return {
-        incr: () => setValue(p => p + by),
-        decr: () => setValue(p => p - by),
-        reset: () => setValue(start),
-        value,
-        setValue
-    }
+    const [value, setValue] = useState(start);
+
+    const incr = () => setValue(p => p + by);
+    const decr = () => setValue(p => p - by);
+    const reset = () => setValue(start);
+
+    return { value, setValue, incr, decr, reset };
 }
 
-export default useCounter
+export default useCounter;
