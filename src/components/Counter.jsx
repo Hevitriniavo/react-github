@@ -9,8 +9,8 @@ const Counter = () => {
             <Title>Counter</Title>
             <Value>{value}</Value>
             <ButtonGroup>
-                <Button onClick={incr}>Incrémenter</Button>
                 <Button onClick={decr}>Décrémenter</Button>
+                <Button onClick={incr}>Incrémenter</Button>
                 <Button onClick={reset}>Réinitialiser</Button>
             </ButtonGroup>
         </Container>
